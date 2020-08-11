@@ -1,0 +1,35 @@
+<ion-content class="ion-padding">
+
+  <ion-grid class="ion-justify-content-start">
+    <ion-row>
+      <ion-col size="4"></ion-col>
+      <ion-col size="4">
+        <ion-label>Iniciar Sesión</ion-label>
+      </ion-col>
+      <ion-col size="4"></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  
+  <div class="ion-padding">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="ion-padding">
+        <ion-item>
+          <ion-label position="floating">Correo <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required formControlName="correo" type="text"></ion-input>
+        </ion-item>
+      </div>
+      <div class="ion-padding">
+        <ion-item>
+          <ion-label position="floating">Contraseña <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </div>
+      <ion-button  block color="primary" type="submit" [disabled]="loginForm.invalid">
+        Ingresar
+      </ion-button>
+    </form>
+  </div>
+
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="carrito()">
+        <ion-icon slot="start" name="add"></ion-icon>
+      </ion-button>
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides pager="true" [options]="slideOpts">
+
+    <ion-slide>
+      <div class="slide">
+        <img [src]="link"/>
+        <h2>Bienvenido</h2>
+        <p> <b>Consultar estado de cuenta.</b></p>
+        <ion-button (click)="onClick()" expand="block" color="dark" shape="round">
+          Consultar
+        </ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img [src]="link"/>
+      <h2>Historial</h2>
+      <p><b>Mis transacciones.</b></p>
+      <ion-button (click)="onClick()" expand="block" color="dark" shape="round">
+        Transacciones
+      </ion-button>
+    </ion-slide>
+
+    <ion-slide>
+      <img [src]="link"/>
+      <h2>Configuracion de cuenta</h2>
+      <p><b>Editar tu perfil.</b></p>
+      <ion-button (click)="onClick()" expand="block" color="dark" shape="round">
+        Editar
+      </ion-button>
+    </ion-slide>
+
+    <ion-slide>
+      <img [src]="link"/>
+      <h2>Gastos</h2>
+      <ion-button fill="clear">Aqui <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+
+  </ion-slides>
+
+
+</ion-content>
